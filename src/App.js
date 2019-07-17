@@ -26,7 +26,7 @@ const App = () => {
   if (loggedIn) {
     return (
       <View style={styles.container}>
-        <Text style={styles.title}>Logged In Successful!</Text>
+        <Text style={styles.title} testID="dashboard-text">Logged In Successful!</Text>
       </View>
     );
   }
@@ -63,6 +63,7 @@ const App = () => {
       <View style={styles.loginContainer}>
         <Text style={styles.title}>Sign In!</Text>
         <TextInput
+          testID="email-field"
           style={styles.textInput}
           placeholder="sanjeev@gmail.com"
           textContentType="emailAddress"
@@ -70,6 +71,7 @@ const App = () => {
           value={form.email}
         />
         <TextInput
+          testID="password-field"
           style={styles.textInput}
           placeholder="password"
           textContentType="password"
@@ -77,6 +79,7 @@ const App = () => {
           value={form.password}
         />
         <Button
+          testID="login-btn"
           onPress={onClick}
           title="Login"
           color="#841584"
